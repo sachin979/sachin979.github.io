@@ -158,6 +158,7 @@ transform: scale(1.015);
   text-align: center;
   margin: 5px;
   max-width: 100%;
+  height: 35%;
 }
 
 .project-image img {
