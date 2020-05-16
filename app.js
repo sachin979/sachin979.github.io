@@ -112,10 +112,16 @@ particlesJS("particles-js", particlesJSON);
 
 var $projects = $('.bar');
 
+
 $(document).ready(function() {
   $projects.waypoint(function(){
-    console.console.log("works");
-  },
-offset:{70%})
-
+  $('.html').addClass('htmlbar');
+  $('.css').addClass('css-bar');
+  $('.js').addClass('js-bar');
+  $('.react').addClass('react-bar');
+  $('.php').addClass('php-bar');
+  $('.python').addClass('python-bar');
+},{
+  offset: '75%'
 })
+});

@@ -20,7 +20,7 @@ body {
   padding: 0;
   /* position it to start at the top of the page */
   top: 0;
-  margin-top: 10vh;
+
   /* put it behind other content */
 }
 
@@ -176,11 +176,13 @@ transform: scale(1.015);
 .project-link .fa-github:hover {
   box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 0.6), inset 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
+
 .skills-container {
-  width: 1000px;
+  width: 70%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
@@ -189,7 +191,7 @@ transform: scale(1.015);
 }
 .bar {
     z-index: 1;
-  flex-basis: 45%;
+  flex-basis: 40%;
 background-color: #273645;
     padding: 5px;
     margin: 15px;
@@ -198,7 +200,30 @@ background-color: #273645;
     font-weight: bold;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.);
     color: #273645;
+
+
 }
+@media only screen and (max-width: 768px) {
+  .skills-container {
+    width: 80%;
+    justify-content: center;
+  }
+  .bar {
+      z-index: 1;
+    flex-basis: 40%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .skills-container {
+    width:85%;
+    justify-content: center;
+  }
+  .bar {
+    flex-basis: 80%;
+  }
+}
+
+
 
 @keyframes load {
     from {
@@ -234,29 +259,86 @@ background-color: #273645;
     -moz-animation: load 2s 0s;
     -o-animation: load 2s 0s;
 }
-.anim::before {
-  background-color: red;
-}
+
 
 .bar.htmlbar::before {
     padding-right: 45%;
+    transition: 2s;
 }
 
 .bar.css-bar::before {
     padding-right: 40%;
+    transition: 2s;
 }
 
 .bar.js-bar::before {
     padding-right: 20%;
+    transition: 2s;
 }
 
 .bar.react-bar::before {
     padding-right: 20%;
+    transition: 2s;
 }
 
 .bar.php-bar::before {
     padding-right: 25%;
+    transition: 2s;
 }
 .bar.python-bar:before {
     padding-right: 30%;
+    transition: 2s;
+}
+
+
+.contact-container {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100px;
+  width: auto;
+  background-color: #b1c6db;
+  margin-top: 50px;
+}
+
+.contact-container *{
+  padding:10px;
+  z-index: 1;
+  font-size: 30px;
+  border-radius: 50%;
+}
+.contact-container a {
+    color:#273645;
+}
+.contact-container #lk:hover{
+  color:#0077B5;
+}
+.contact-container #fb:hover{
+  color:#4267B2;
+}
+.contact-container #insta:hover{
+  color:#e4405f;
+}
+.contact-container #tw:hover{
+  color:#55acee;
+}
+.contact-container #gh:hover{
+  color:#000000;
+}
+footer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer *{
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color:#273645;
 }
