@@ -157,7 +157,7 @@ transform: scale(1.015);
   align-items: center;
   text-align: center;
   margin: 5px;
-  width: inherit;
+  max-width: 100%;
 }
 
 .project-image img {
