@@ -165,7 +165,6 @@ transform: scale(1.015);
 .project-image img {
   padding: 5px;
   padding-top: 2px;
-  overflow: hidden;
   width: 100%;
   height: auto;
 }
