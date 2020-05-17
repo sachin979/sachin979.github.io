@@ -157,8 +157,8 @@ transform: scale(1.015);
   align-items: center;
   text-align: center;
   margin: 5px;
-  max-width: 100%;
-  height: 35%;
+  width: 100%;
+  height: auto;
 }
 
 .project-image img {
