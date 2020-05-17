@@ -159,6 +159,7 @@ transform: scale(1.015);
   margin: 5px;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .project-image img {
