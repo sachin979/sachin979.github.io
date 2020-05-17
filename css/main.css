@@ -225,6 +225,10 @@ background-color: #273645;
   .bar {
     flex-basis: 80%;
   }
+  .txtarea {
+    font-size:18px;
+    max-width: 380px;
+  }
 }
 
 
