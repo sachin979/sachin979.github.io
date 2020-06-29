@@ -166,10 +166,10 @@ transform: scale(1.015);
   padding: 5px;
   padding-top: 2px;
   width: 100%;
-  height: auto;
+  height: 140px;
 }
 
-.project-link .fa-link {
+.project-link .fa-link .fa-github{
   text-decoration: none;
   color: #212f3c;
   border-radius: 10%;
