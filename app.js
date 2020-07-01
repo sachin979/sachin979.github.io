@@ -1,4 +1,5 @@
-const particlesJSON = {
+var part = "#ffffff";
+var particlesJSON = {
   "particles": {
     "number": {
       "value": 80,
@@ -8,7 +9,7 @@ const particlesJSON = {
       }
     },
     "color": {
-      "value": "#000000"
+      "value": part
     },
     "shape": {
       "type": "circle",
@@ -54,7 +55,7 @@ const particlesJSON = {
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 3,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -92,7 +93,7 @@ const particlesJSON = {
         "size": 40,
         "duration": 2,
         "opacity": 8,
-        "speed": 3
+        "speed": 1
       },
       "repulse": {
         "distance": 200,
@@ -108,7 +109,8 @@ const particlesJSON = {
   },
   "retina_detect": true
 }
-particlesJS("particles-js", particlesJSON);
+tsParticles.load("particlesjs", particlesJSON);
+//particlesJS("particlesjs", particlesJSON);
 
 var $projects = $('.bar');
 
@@ -125,3 +127,27 @@ $(document).ready(function() {
   offset: '75%'
 })
 });
+
+
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const container = tsParticles.domItem(0);
+const options = container.options;
+function changeColor() {
+  console.log("works "+part);
+  options.particles.color.value = part;
+container.refresh();
+}
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        part= "#ffffff";
+        changeColor();
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        part= "#000000";
+        changeColor();
+    }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
