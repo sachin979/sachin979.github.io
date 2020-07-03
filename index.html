@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <head profile="http://www.w3.org/2005/10/profile">
-<link rel="icon"
+  <link rel="icon"
       type="image/png"
       href="images/sachin-naik.png" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Source+Code+Pro&display=swap" rel="stylesheet">
@@ -28,12 +28,15 @@
 
     <div id="particlesjs"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.16.2/tsparticles.min.js"></script>
-    <div class="theme-switch-wrapper">
-    <label class="theme-switch" for="checkbox">
-        <input type="checkbox" id="checkbox" />
-        <div class="slider round"></div>
-  </label>
-</div>
+    <div class="theme-switch">
+      <label for="switchbox" id="labeltag">
+          <input type="checkbox" id="switchbox">
+  <div class="round">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+  </div>
+    </label>
+      </div>
     <div class="main-img">
       <img class="my-img" src="sachin.jpg"></img>
     </div>
@@ -99,6 +102,12 @@
   <p>Designed by Sachin Naik</p>
       <p>2020 &copy; Sachin Naik.</p>
     </footer>
+    <div class="loading-screen" id="loaded">
+      <div class="loading">
+        <div class="inner-circle">
+        </div>
+      </div>
+        </div>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/gh/sachin979/sachin979.github.io/node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
 

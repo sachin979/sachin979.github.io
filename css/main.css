@@ -374,63 +374,87 @@ footer *{
   font-size: 18px;
   color: var(--primary-color);
 }
-
-/*toggle-switch*/
-.theme-switch-wrapper {
-  display: flex;
-float: right;
-  align-items: center;
-
-  em {
-    margin-left: 10px;
-    font-size: 1rem;
-  }
-}
 .theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
-}
-
-.theme-switch input {
-  display:none;
-}
-
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
   position: absolute;
   right: 0;
+  padding: 10px;
+  z-index: 3;
+}
+.theme-switch #labeltag {
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+}
+.theme-switch input {
+  display: none;
+}
+.round {
+  display:inline-block;
+  height: 18px;
+  width: 46px;
+  margin: 1px 2px;
+  border-radius: 10px;
+background-color: var(--bg-color);
+transition: .4s;
+}
+.fas {
+  font-size: 17px;
+  text-align: center;
+}
+.fa-moon {
+  color: #d2dae2;
+}
+.fa-sun {
+  float: right;
+  font-size: 16px;
+  color: #161625;
+  margin-right: 2px;
+}
+.loading-screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
   top: 0;
-  transition: .4s;
+  left: 0;
+  background-color: var(--bg-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
 }
 
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 26px;
-}
-
-input:checked + .slider {
-  background-color: #66bb6a;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
+.loading, .inner-circle {
+margin: 20px auto;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
+  opacity: 0.5;
+  background-color: var(--primary-color);
+  animation: circle 1s infinite ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-circle {
+  background-color: var(--bg-color);
+  animation: innercircle 1s infinite ease-in-out;
+}
+@keyframes circle {
+  0%, 100%{
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+}
+@keyframes innercircle {
+  0%, 100%{
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.0);
+  }
 }

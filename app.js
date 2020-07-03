@@ -1,8 +1,12 @@
-var part = "#ffffff";
+$(window).on('load', function() {
+    $('#loaded').hide();
+  });
+
+var part = "#000000";
 var particlesJSON = {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 60,
       "density": {
         "enable": true,
         "value_area": 800
@@ -27,7 +31,7 @@ var particlesJSON = {
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0.4,
       "random": false,
       "anim": {
         "enable": false,
@@ -41,7 +45,7 @@ var particlesJSON = {
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 40,
+        "speed": 20,
         "size_min": 0.1,
         "sync": false
       }
@@ -55,7 +59,7 @@ var particlesJSON = {
     },
     "move": {
       "enable": true,
-      "speed": 3,
+      "speed": 2,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -137,14 +141,29 @@ function changeColor() {
   options.particles.color.value = part;
 container.refresh();
 }
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+        part= "#ffffff";
+        changeColor();
+    }
+}
+
 function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
         part= "#ffffff";
         changeColor();
     }
     else {
         document.documentElement.setAttribute('data-theme', 'light');
+         localStorage.setItem('theme', 'light');
         part= "#000000";
         changeColor();
     }
