@@ -70,17 +70,21 @@ body {
 
 .txtarea {
   text-align: center;
-  font-size: 20px;
-  color: var(--font-color);
-  font-family: 'Noto Sans JP', sans-serif;
-  margin-top: 80px;
+  font-size: 35px;
+  color: var(--primary-color);
+  font-family: 'Cabin', sans-serif;
+  margin-top: 60px;
+  height: 50px;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
 }
 
-.txtarea .about-text {
+.about-text {
   background-color: :#bdbdbd;
+      text-align: center;
+      font-family: 'Noto Sans JP', sans-serif;
 }
 
 .cover-img {

@@ -1,6 +1,14 @@
 $(window).on('load', function() {
     $('#loaded').hide();
   });
+var typed = new Typed('.about-text', {
+    strings: ["an Engineer", "a Geek","Web Developer","Learner"],
+    typeSpeed: 60,
+    loop: true,
+    showCursor: false,
+    startDelay: 400
+  });
+
 
 var part = "#000000";
 var particlesJSON = {
