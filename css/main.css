@@ -82,7 +82,6 @@ body {
 }
 
 .about-text {
-  background-color: :#bdbdbd;
       text-align: center;
       font-family: 'Noto Sans JP', sans-serif;
 }
@@ -309,12 +308,12 @@ background-color: var(--primary-color);
 }
 
 .bar.js-bar::before {
-    padding-right: 20%;
+    padding-right: 28%;
     transition: 2s;
 }
 
 .bar.react-bar::before {
-    padding-right: 20%;
+    padding-right: 18%;
     transition: 2s;
 }
 
@@ -325,6 +324,35 @@ background-color: var(--primary-color);
 .bar.python-bar:before {
     padding-right: 30%;
     transition: 2s;
+}
+.bar.c-bar:before {
+  padding-right: 30%;
+  transition: 2s;
+}
+.bar.flutter-bar:before {
+  padding-right: 30%;
+  transition: 2s;
+}
+.resume {
+  display: flex;
+  justify-content: center;
+
+}
+.resume a{
+  z-index: 1;
+  text-decoration: none;
+  font-family: Pacifico;
+  font-size: 18px;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+   box-shadow: 5px 5px 9px var(--shadow-color1),
+   -5px -5px 9px var(--shadow-color2);
+ padding: 10px;
+ margin-top: 20px;
+}
+.resume a:hover {
+  box-shadow:7px 7px 13px var(--shadow-color1),
+  -7px -7px 13px var(--shadow-color2);
 }
 
 

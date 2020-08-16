@@ -2,7 +2,7 @@ $(window).on('load', function() {
     $('#loaded').hide();
   });
 var typed = new Typed('.about-text', {
-    strings: ["an Engineer", "a Geek","Web Developer","Learner"],
+    strings: ["I learn to code", "I play games","I love Tech","I watch YouTube"],
     typeSpeed: 60,
     loop: true,
     showCursor: false,
@@ -134,6 +134,8 @@ $(document).ready(function() {
   $('.js').addClass('js-bar');
   $('.react').addClass('react-bar');
   $('.php').addClass('php-bar');
+  $('.c').addClass('c-bar');
+  $('.flutter').addClass('flutter-bar');
   $('.python').addClass('python-bar');
 },{
   offset: '75%'
